@@ -1,0 +1,20 @@
+{
+  "name": "Base-Apparel-Coming-Soon-Page",
+  "version": "1.0.0",
+  "description": "Test",
+  "main": "index.js",
+  "scripts": {
+    "watch": "node-sass -o css scss -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rui-calvario/Base-Apparel-Coming-Soon-Page.git"
+  },
+  "keywords": [],
+  "author": "Rui Calvario",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rui-calvario/Base-Apparel-Coming-Soon-Page/issues"
+  },
+  "homepage": "https://github.com/rui-calvario/Base-Apparel-Coming-Soon-Page#readme"
+}
