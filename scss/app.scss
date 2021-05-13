@@ -1,0 +1,199 @@
+//RESET IMPORT
+@import 'reset';
+
+//FONT
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+//COLOURS
+$primary-red: hsl(0, 36%, 70%);
+$primary-soft-red: hsl(0, 93%, 68%);
+$dark-red: hsl(0, 6%, 24%);
+
+//GRADIENTS
+$gradient-1: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+$gradient-2: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+
+//STANDARD
+body {
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+	height: 100vh;
+	width: 100vw;
+	background: url(../images/bg-pattern-desktop.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: -1;
+}
+
+.background {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 40%;
+	height: 100vh;
+	background-image: url(../images/hero-desktop.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: -1;
+
+	@media screen and (max-width: 700px) {
+		position: relative;
+		width: 100%;
+		background-image: url(../images/hero-mobile.jpg);
+		height: 250px;
+		background-size: contain;
+	}
+}
+
+h1.pink {
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 4rem;
+	line-height: 64px;
+	font-weight: 300;
+	color: $primary-red;
+	letter-spacing: 1.0825rem;
+}
+
+h1.black {
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 4rem;
+	line-height: 71px;
+	font-weight: 400;
+	color: $dark-red;
+	letter-spacing: 1.0825rem;
+}
+
+p {
+	font-family: 'Josefin Sans', sans-serif;
+	line-height: 28px;
+	color: $primary-red;
+	padding-right: 12rem;
+	margin: 2rem 0 3rem 0;
+
+	@media screen and (max-width: 1024px) {
+		padding-right: 2rem;
+	}
+}
+
+//CONTENT
+.logo-container {
+	height: 10vh;
+	margin: 0 auto;
+	padding: 0;
+	max-width: 1440px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+
+	@media screen and (max-width: 700px) {
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+	}
+}
+.logo {
+	padding-left: 6rem;
+
+	@media screen and (max-width: 850px) {
+		padding-left: 3.5rem;
+	}
+
+	@media screen and (max-width: 700px) {
+		padding-left: 1rem;
+	}
+}
+
+.logo img {
+	width: 12%;
+
+	@media screen and (max-width: 1024px) {
+		width: 15%;
+	}
+
+	@media screen and (max-width: 850px) {
+		width: 18%;
+	}
+
+	@media screen and (max-width: 700px) {
+		width: 90%;
+	}
+}
+
+.container {
+	margin: 0 auto;
+	padding: 0;
+	width: 100%;
+	max-width: 1440px;
+	height: 80vh;
+	z-index: 9999;
+	display: flex;
+	justify-content: flex-start;
+}
+
+.content {
+	width: 50%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 6rem;
+
+	@media screen and (max-width: 850px) {
+		padding-left: 3.5rem;
+	}
+}
+
+.signup {
+	display: flex;
+	flex-direction: row;
+}
+
+input {
+	width: 65%;
+	height: 56px;
+	padding: 18px 30px;
+	background-color: transparent;
+	border-radius: 30px;
+	border: 1px solid rgba(206, 152, 152, 0.5);
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 300;
+	color: $primary-red;
+
+	@media screen and (max-width: 1024px) {
+		width: 85%;
+	}
+}
+
+input:focus {
+	outline: none;
+}
+
+input::placeholder {
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 300;
+	color: $primary-red;
+}
+
+button {
+	width: 100px;
+	height: 56px;
+	position: relative;
+	top: 4px;
+	border-radius: 30px;
+	margin-left: -80px;
+	background-image: $gradient-2;
+	border: none;
+	box-shadow: 0px 15px 20px 0px rgba(198, 110, 110, 0.24);
+	cursor: pointer;
+	outline: none;
+	transition: ease-in-out 0.3s;
+}
+
+button:hover {
+	background-image: none;
+	background-color: hsl(0, 80%, 86%);
+	outline: none;
+	box-shadow: 0px 15px 20px 0px rgba(198, 110, 110, 0.6);
+	transition: ease-in-out 0.3s;
+}
