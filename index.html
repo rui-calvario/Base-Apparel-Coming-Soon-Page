@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/app.css">
     <title>Base Apparel Coming Soon Page</title>
 </head>
@@ -24,13 +25,19 @@
             <h1 class="black">COMING<br>SOON</h1>
             <p>Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
 
-            <div class="sign-up">
-                <input type="email" placeholder="Email Address" onfocus="this.placeholder =''" onblur="this.placeholder = 'Email Address'">
-                <button type="button"><img src="./images/icon-arrow.svg" alt="Submit"></button>
-            </div>
+            <form class="sign-up" id="form" novalidate>
+                <div class="form-control">
+                    <input id="email" type="email" placeholder="Email Address" onfocus="this.placeholder =''" onblur="this.placeholder = 'Email Address'"><i class="fas fa-exclamation-circle icon"></i>
+                    <small class="error-message"></small>
+                    <small class="success-message"></small>
+                </div>
+                <button type="submit"><img src="./images/icon-arrow.svg" alt="Submit"></button>  
+            </form>
         </div>
 
     </div>
+
+    <script src="js/script.js"></script>
 
 </body>
 </html>

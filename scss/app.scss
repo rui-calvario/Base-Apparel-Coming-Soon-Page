@@ -8,6 +8,8 @@
 $primary-red: hsl(0, 36%, 70%);
 $primary-soft-red: hsl(0, 93%, 68%);
 $dark-red: hsl(0, 6%, 24%);
+$error-colour: #f96464;
+$success-color: green;
 
 //GRADIENTS
 $gradient-1: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
@@ -219,8 +221,75 @@ p {
 	align-items: center;
 }
 
-input {
+.form-control {
+	position: relative;
 	width: 65%;
+
+	@media screen and (max-width: 1024px) {
+		width: 100%;
+	}
+}
+
+.form-control.error input {
+	border-color: $error-colour;
+}
+
+.form-control.success input {
+	border-color: $success-color;
+}
+
+.form-control small.error-message {
+	color: $error-colour;
+	position: absolute;
+	bottom: -35px;
+	left: 20px;
+	visibility: hidden;
+}
+
+.form-control small.success-message {
+	color: $success-color;
+	position: absolute;
+	bottom: -35px;
+	left: 20px;
+	visibility: hidden;
+}
+
+.form-control.error small.error-message {
+	visibility: visible;
+}
+
+.form-control.success small.success-message {
+	visibility: visible;
+}
+
+.form-control i {
+	position: absolute;
+	left: 65%;
+	top: 15%;
+	font-size: 20px;
+	visibility: hidden;
+
+	@media screen and (max-width: 700px) {
+		left: 70%;
+	}
+
+	@media screen and (max-width: 375px) {
+		left: 60%;
+	}
+}
+
+.form-control.error i {
+	visibility: visible;
+}
+
+.icon {
+	padding: 10px;
+	min-width: 40px;
+	color: $error-colour;
+}
+
+input {
+	width: 100%;
 	height: 56px;
 	padding: 18px 30px;
 	background-color: transparent;

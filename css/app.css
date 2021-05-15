@@ -178,8 +178,62 @@ p {
   flex-direction: row;
   align-items: center; }
 
+.form-control {
+  position: relative;
+  width: 65%; }
+  @media screen and (max-width: 1024px) {
+    .form-control {
+      width: 100%; } }
+
+.form-control.error input {
+  border-color: #f96464; }
+
+.form-control.success input {
+  border-color: green; }
+
+.form-control small.error-message {
+  color: #f96464;
+  position: absolute;
+  bottom: -35px;
+  left: 20px;
+  visibility: hidden; }
+
+.form-control small.success-message {
+  color: green;
+  position: absolute;
+  bottom: -35px;
+  left: 20px;
+  visibility: hidden; }
+
+.form-control.error small.error-message {
+  visibility: visible; }
+
+.form-control.success small.success-message {
+  visibility: visible; }
+
+.form-control i {
+  position: absolute;
+  left: 65%;
+  top: 15%;
+  font-size: 20px;
+  visibility: hidden; }
+  @media screen and (max-width: 700px) {
+    .form-control i {
+      left: 70%; } }
+  @media screen and (max-width: 375px) {
+    .form-control i {
+      left: 60%; } }
+
+.form-control.error i {
+  visibility: visible; }
+
+.icon {
+  padding: 10px;
+  min-width: 40px;
+  color: #f96464; }
+
 input {
-  width: 65%;
+  width: 100%;
   height: 56px;
   padding: 18px 30px;
   background-color: transparent;
